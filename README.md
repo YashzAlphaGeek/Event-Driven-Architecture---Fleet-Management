@@ -27,6 +27,6 @@ In this example, Autonomous Vehicle Fleet Management will use Event-Driven Archi
 ![image](https://github.com/user-attachments/assets/47e3ca54-38bb-4a34-ac56-360a5463c4fe)
 
 
-
+<img width="481" alt="image" src="https://github.com/user-attachments/assets/ce5d3e70-27f1-4cc2-bfcd-b40e2e650bbf">
 
 
