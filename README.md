@@ -14,6 +14,8 @@ In this example, Autonomous Vehicle Fleet Management will use Event-Driven Archi
 + Customer ride requests
 + Real-time weather conditions affecting driving decisions
 
+![image](https://github.com/YashzAlphaGeek/Event-Driven-Architecture---Fleet-Management/blob/master/fleetmanagement/demo-video.gif)
+
 <b>Event Producers: Autonomous vehicles, IoT sensors, traffic systems, weather APIs.</b>
 
 <b>Event Consumers: Fleet management system, autonomous vehicle routing service, customer ride allocation service.</b>
