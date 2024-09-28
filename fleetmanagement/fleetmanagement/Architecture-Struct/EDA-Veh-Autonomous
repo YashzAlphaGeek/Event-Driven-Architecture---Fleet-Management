@@ -1,0 +1,27 @@
+@startuml
+
+actor "Autonomous Vehicles" as AV
+actor "IoT Sensors" as IoT
+actor "Traffic Systems" as Traffic
+actor "Weather APIs" as Weather
+
+cloud "Apache Kafka" as Kafka
+
+AV --> Kafka : Vehicle Events
+IoT --> Kafka : Sensor Data
+Traffic --> Kafka : Traffic Updates
+Weather --> Kafka : Weather Data
+
+cloud "Kafka Streams Processing" as Processing
+
+Kafka --> Processing : Stream Events
+
+rectangle "Fleet Management System" as Fleet
+rectangle "Autonomous Vehicle Routing" as Routing
+rectangle "Customer Ride Allocation" as RideAllocation
+
+Processing --> Fleet : Traffic Rerouting
+Processing --> Routing : Vehicle Assignment
+Processing --> RideAllocation : Ride Allocation, Battery Optimization
+
+@enduml

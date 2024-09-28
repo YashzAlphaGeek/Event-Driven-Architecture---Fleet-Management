@@ -4,7 +4,7 @@ spring:
       enabled: false
 
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: localhost:9093
     consumer:
       group-id: vehicle_group
       auto-offset-reset: earliest

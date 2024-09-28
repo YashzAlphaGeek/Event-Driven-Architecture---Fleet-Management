@@ -18,7 +18,12 @@ public class VehicleEventProducer {
 
     @PostMapping("/sendEvent")
     public String sendVehicleEvent(@RequestBody VehicleEvent vehicleEvent) {
-        kafkaTemplate.send(TOPIC, vehicleEvent);
-        return "Vehicle Event Sent!";
+        try {
+            kafkaTemplate.send(TOPIC, vehicleEvent).get(); // Use get() to ensure it's synchronous and catches errors
+            return "Vehicle Event Sent!";
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "Failed to send event: " + e.getMessage();
+        }
     }
 }
